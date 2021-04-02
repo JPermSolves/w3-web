@@ -12,12 +12,23 @@
 			ul,ol,dl {
 				list-style-position: inside;
 			}
+			#nameForm {
+				position: sticky;
+				bottom: 0px;
+			}
 		</style>
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 		<!--Link JS and add script tags.-->
 		<script src="https://cdn2.iconfinder.com/data/icons/essential-circles-1/24/_j-512.png"></script>
 		<script>
-			
+			function useName() {
+				var name = document.getElementById("name").value;
+				document.getElementById("nameForm").style.display = "none";
+				var spansToBeChanged = document.getElementsByClassName("name");
+				for (var i = 0; i < spansToBeChanged.length; i++) {
+					spansToBeChanged[i].innerHTML = " " + name;
+				}
+			}
 		</script>
 		<!--Favicon.-->
 		<link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/j-character-alphabet-letter-32861.png" type="image/x-icon" sizes="16x16 24x24 32x32 64x64">
@@ -37,7 +48,7 @@
 		<div class="w3-container w3-theme-l1">
 			<h2>About Me</h2>
 			<div class="w3-container w3-theme-l4">
-				<p>I live in Long Beach, CA with my mom and dad. I have 2 twin brothers, Oliver and Anders (Oliver was born 6 minutes earlier). There are 19 kids on my street. They are:</p>
+				<p>Hello<span class="name"></span>, I live in Long Beach, CA with my mom and dad. I have 2 twin brothers, Oliver and Anders (Oliver was born 6 minutes earlier). There are 19 kids on my street. They are:</p>
 				<div class="w3-container w3-theme-l4 w3-center">
 					<ol>
 						<li>Anders</li>
@@ -86,7 +97,7 @@
 							<h5>Matches</h5>
 							<h6>Matchday 1</h6>
 							<ul>
-								<li><span class = urtown-united>UTU</span> vs <span class = ninton-town>NIN</span> 5-0</li>
+								<li><span class = "urtown-united">UTU</span> vs <span class = "ninton-town">NIN</span> 5-0</li>
 								<li><span class = linton>LIN</span> vs <span class = firmir>FMR</span> 0-0</li>
 								<li><span class = manville-rovers>MNR</span> vs <span class = lakinet>LAK</span> 4-4</li>
 							</ul>
@@ -171,11 +182,10 @@
 				</div>
 				<br>
 			</div>
-		</div>
 		<div class="w3-container w3-theme-d2">
 			<h2>Other Webistes</h2>
 			<div class="w3-container w3-theme-l3">
-				<p>My brothers have webistes too. <a href="https://hatchlingscheeseburger.github.io/w3-andezliga/index.html" class="w3-text-theme">Click here for Andezliga.</a> <a href="https://shackleton29.github.io/olileague/" class="w3-text-theme">Click here for Oli League.</a></p>
+				<p>Also,<span class="name"></span> my brothers have webistes too. <a href="https://hatchlingscheeseburger.github.io/w3-andezliga/index.html" class="w3-text-theme">Click here for Andezliga.</a> <a href="https://shackleton29.github.io/olileague/" class="w3-text-theme">Click here for Oli League.</a></p>
 			</div>
 			<br>
 		</div>
@@ -202,6 +212,11 @@
 		</div>
 		<div class="w3-container w3-theme-d5">
 			<p>Having trouble loading? <a href="nocss.html">Try basic HTML.</a></p>
+		</div>
+		<div class="w3-container w3-theme" id="nameForm">
+			<p>Hi, please enter your name. It won't be shared with anyone.</p>
+			<input type="text" placeholder="Enter name here..." id="name">
+			<input type="submit" value="Submit" class="w3-button w3-theme-l1" onclick="useName();">
 		</div>
 	</body>
 </html>
