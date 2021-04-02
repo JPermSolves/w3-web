@@ -22,8 +22,8 @@
 		<!--Link JS and add script tags.-->
 		<script src="https://cdn2.iconfinder.com/data/icons/essential-circles-1/24/_j-512.png"></script>
 		<script>
+			var name = window.prompt("What is your name", "");
 			function useName() {
-				var name = document.getElementById("name").value;
 				document.getElementById("nameForm").style.display = "none";
 				var spansToBeChanged = document.getElementsByClassName("name");
 				for (var i = 0; i < spansToBeChanged.length; i++) {
