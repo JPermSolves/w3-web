@@ -22,15 +22,15 @@
 		<script src="https://www.w3schools.com/lib/w3.js"></script>
 		<script>
 		function useName() {
-				var name = prompt("What is your name?", "");
-				console.log(name);
-				var spansToBeChanged = document.getElementsByClassName("name");
-				for (var i = 0; i < spansToBeChanged.length; i++) {
-					spansToBeChanged[i].innerHTML = " " + name;
-				}
+			var name = prompt("What is your name?", "");
+			console.log(name);
+			var spansToBeChanged = document.getElementsByClassName("name");
+			for (var i = 0; i < spansToBeChanged.length; i++) {
+				spansToBeChanged[i].innerHTML = " " + name;
 			}
-			setTimeout(useName, 3000);
-			</script>
+		}
+		setTimeout(useName, 3000);
+		</script>
 		<!--Favicon.-->
 		<link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/j-character-alphabet-letter-32861.png" type="image/x-icon" sizes="16x16 24x24 32x32 64x64" />
 		<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.iconscout.com/icon/free/png-256/j-character-alphabet-letter-32861.png" />
