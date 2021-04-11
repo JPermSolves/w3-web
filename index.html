@@ -13,18 +13,23 @@
 			ul,ol,dl {
 				list-style-position: inside;
 			}
+			#name-form {
+				position: sticky;
+				bottom: 0px;
+			}
 		</style>
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 		<!--Link JS and add script tags.-->
 		<script src="https://www.w3schools.com/lib/w3.js"></script>
 		<script>
 		function useName() {
-			var name = prompt("What is your name?", "");
+			var name = document.getElementByID("name").value;
 			var spansToBeChanged = document.getElementsByClassName("name");
-			if (name != null) {
-				for (var i = 0; i < spansToBeChanged.length; i++) {
-					spansToBeChanged[i].innerHTML = " " + name;
-				}
+			document.getElementById("name-form").style.visibility = "none";
+			if (name != "") {
+					for (var i = 0; i < spansToBeChanged.length; i++) {
+						spansToBeChanged[i].innerHTML = " " + name;
+					}
 			}
 		}
 		setTimeout(useName, 3000);
@@ -194,6 +199,11 @@
 			</div>
 		<div class="w3-container w3-theme-d5">
 			<p>Having trouble loading? <a href="/basic.html">Try basic HTML.</a></p>
+		</div>
+		<div id="name-form">
+			<p>What is your name?</p>
+			<input type="text" placeholder="Enter name here...">
+			<input type="submit" value="Submit" onclick="useName();">
 		</div>
 	</body>
 </html>
