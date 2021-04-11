@@ -25,7 +25,7 @@
 		function useName() {
 			var name = document.getElementByID("name").value;
 			var spansToBeChanged = document.getElementsByClassName("name");
-			document.getElementById("name-form").style.visibility = "none";
+			document.getElementById("name-form").display = "none";
 			if (name != "") {
 					for (var i = 0; i < spansToBeChanged.length; i++) {
 						spansToBeChanged[i].innerHTML = " " + name;
@@ -202,7 +202,7 @@
 		</div>
 		<div class="w3-container w3-theme-d5" id="name-form">
 			<p>What is your name?</p>
-			<input type="text" placeholder="Enter name here...">
+			<input type="text" placeholder="Enter name here..." id="name">
 			<input type="submit" value="Submit" onclick="useName();">
 		</div>
 	</body>
