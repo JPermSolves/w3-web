@@ -1,5 +1,5 @@
 <!doctype html>
-<!--v2.3.6-->
+<!--v2.5-->
 <html lang="en-US">
 	<head>
 		<!--Define charset and width.-->
@@ -23,17 +23,7 @@
 		<!--Link JS and add script tags.-->
 		<script src="https://www.w3schools.com/lib/w3.js"></script>
 		<script>
-		function useName() {
-			var name = document.getElementByID("name").value;
-			var spansToBeChanged = document.getElementsByClassName("name");
-			document.getElementById("name-form").display = "none";
-			if (name != "") {
-					for (var i = 0; i < spansToBeChanged.length; i++) {
-						spansToBeChanged[i].innerHTML = " " + name;
-					}
-			}
-		};
-		setTimeout(useName, 3000);
+		
 		</script>
 		<!--Favicon.-->
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -47,11 +37,6 @@
 		<!--Make content.-->
 		<div class="w3-container w3-theme-l2">
 			<h1 class="w3-center">Jude's Website</h1>
-		</div>
-		<div class="w3-container w3-theme-d5" id="name-form">
-			<p>What is your name?</p>
-			<input type="text" placeholder="Enter name here..." id="name">
-			<input type="submit" value="Submit" onclick="useName();">
 		</div>
 		<div class="w3-container w3-theme-l1">
 			<h2>About Me</h2>
